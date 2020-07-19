@@ -12,6 +12,7 @@ class CashRegister
   
   def add_item(title, price, qty=1)
     @total += (price * qty)
+    @items << (title * qty)
 
 =begin    
     @items.push(title * qty)
@@ -33,7 +34,7 @@ class CashRegister
   end
   
   def items
-    
+    @items
   end
   
 end
