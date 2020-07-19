@@ -16,6 +16,7 @@ class CashRegister
       @items << title
     end
   end
+  
 =begin    
     @items.push(title * qty)
     if @items_with_price.include?(title)
