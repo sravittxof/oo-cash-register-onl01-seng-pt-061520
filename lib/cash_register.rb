@@ -17,7 +17,7 @@ class CashRegister
       @items << title
     end
     @last_transaction_value = price * qty
-    @last_transaction_items = qty
+    @last_transaction_item_qty = qty
   end
   
 =begin    
@@ -44,8 +44,12 @@ class CashRegister
   
   def void_last_transaction
     @total -= @last_transaction_value
-    @items.pop
-    if @
+    @last_transaction_item_qty.times do
+      @items.pop
+    end
+    if @items.size == 0
+      @total = 0
+    end
   end
   
 end
