@@ -13,7 +13,9 @@ class CashRegister
   
   def add_item(title, price, qty=1)
     @total += (price * qty)
-    @items << (title * qty)
+    qty.times do |title|
+      @items << title
+    end
   end
 =begin    
     @items.push(title * qty)
