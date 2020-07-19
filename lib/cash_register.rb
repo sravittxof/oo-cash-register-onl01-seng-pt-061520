@@ -4,7 +4,7 @@ class CashRegister
   @items = []
   @items_with_price = {}
   
-  def initialize(discount*)
+  def initialize(*discount)
     @total = 0
     @discount = discount
     self.apply_discount
